@@ -67,7 +67,7 @@ apextrust-bank-lakehouse/
 │   └── 03_gold_analytics/
 │       └── gold_analytics.ipynb
 │
-├── sql/
+├── 04_delta_operations/
 │   ├── merge_operations.sql
 │   ├── time_travel_queries.sql
 │   └── optimize_vacuum.sql
