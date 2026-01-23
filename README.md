@@ -1,45 +1,45 @@
-# 🏦 ApexTrust Bank – Banking Lakehouse Project
+# ApexTrust Bank – Banking Lakehouse Project
 
 ## Overview
+ApexTrust Bank is a real-world Banking Data Lakehouse project built using Databricks, Apache Spark, and Delta Lake.  
+It demonstrates end-to-end data engineering practices, architectural decision-making, and certification-aligned best practices for regulated financial systems.
 
-This project demonstrates a **real-world Banking Data Lakehouse** implementation using **Databricks, Apache Spark, and Delta Lake**. It is designed to showcase **hands-on data engineering skills**, **architecture decision-making**, and **exam-aligned best practices**.
-
-The project follows the **Bronze–Silver–Gold** data modeling pattern and focuses on **ACID transactions, auditability, CDC handling, and BI-ready analytics**, which are critical in regulated domains like banking.
-
----
-
-## 🎯 Project Goals
-
-* Build a **Lakehouse architecture** on cloud-style object storage
-* Practice **Delta Lake operations** (UPDATE, DELETE, MERGE, Time Travel)
-* Apply **data quality and validation rules**
-* Create **BI-ready analytical tables**
-* Demonstrate **interview-ready, job-relevant skills**
+The project follows the Bronze–Silver–Gold Lakehouse architecture and focuses on ACID transactions, auditability, CDC handling, and BI-ready analytics, which are critical in the banking domain.
 
 ---
 
-## 🧱 Architecture
+## Project Objectives
+- Build a Lakehouse architecture on cloud-style object storage
+- Implement Delta Lake operations such as UPDATE, DELETE, MERGE, and Time Travel
+- Apply data quality checks and validation rules
+- Create analytics-ready Gold tables
+- Showcase interview-ready and certification-aligned data engineering skills
+
+
+## Lakehouse Architecture
 
 ```
 Raw Files (CSV)
-      ↓
-Bronze Layer (Raw Delta – Audit)
-      ↓
-Silver Layer (Validated Delta)
-      ↓
-Gold Layer (Analytics Delta)
+↓
+Bronze Layer (Raw Delta – Audit and History)
+↓
+Silver Layer (Cleaned and Validated Delta)
+↓
+Gold Layer (Business Analytics and BI)
+
 ```
 
-**Why Lakehouse?**
 
-* Supports **structured & semi-structured data**
-* Enables **ACID transactions on data lakes**
-* Allows **BI, analytics, and ML on the same data**
-* Reduces system complexity and data duplication
+### Why a Lakehouse
+- Supports structured and semi-structured data
+- Enables ACID transactions on data lakes
+- Allows BI, analytics, and machine learning on the same data
+- Reduces data duplication and system complexity
+- Industry standard for modern data platforms
 
 ---
 
-## 🗂️ Git Repository Structure (Exam + Real Project Ready)
+## Repository Structure
 
 ```
 apextrust-bank-lakehouse/
@@ -78,43 +78,55 @@ apextrust-bank-lakehouse/
     └── data_dictionary.md
 ```
 
----
 
-## 📊 Data Model
+## Data Model
 
-### Core Tables
+**Core Tables**
+- customers – Customer master data with KYC status
+- accounts – Bank accounts and balances
+- transactions – Debit and credit transaction records
+- branches – Branch and regional mapping
 
-* **customers** – customer master data with KYC status
-* **accounts** – bank accounts and balances
-* **transactions** – debit/credit transactions
-* **branches** – branch and regional mapping
-
-These tables are processed across **Bronze, Silver, and Gold layers** using Delta Lake.
+Each table is processed through Bronze, Silver, and Gold layers using Delta Lake.
 
 ---
 
-## 🔁 Key Engineering Practices Demonstrated
+## Key Data Engineering Practices Demonstrated
 
-### Delta Lake
+**Delta Lake**
+- Delta table creation
+- INSERT, UPDATE, and DELETE operations
+- MERGE operations for CDC handling
+- Time Travel for audit and recovery
+- Schema enforcement and evolution
 
-* Delta table creation
-* INSERT / UPDATE / DELETE
-* MERGE (CDC handling)
-* Time Travel for audit & recovery
-* Schema enforcement and evolution
+**Apache Spark**
+- DataFrame-based transformations
+- Spark SQL for analytics
+- Fact and dimension join strategies
+- Performance-aware transformations
 
-### Spark
+**Governance and Performance**
+- Bronze, Silver, and Gold data separation
+- Audit-friendly raw data preservation
+- OPTIMIZE and Z-ORDER for query performance
+- Unity Catalog for schema and access management
 
-* DataFrame transformations
-* Spark SQL for analytics
-* Join strategies for fact/dimension data
+**Intended Audience**
+- Aspiring data engineers
+- Databricks Certified Data Engineer candidates
+- Professionals preparing for technical interviews
+- Learners building practical Lakehouse experience
 
-### Governance & Performance
+**Future Enhancements**
+- Streaming ingestion using Auto Loader
+- Data quality rules and expectations
+- CI/CD integration for notebooks
+- BI dashboards using Databricks SQL or Power BI
 
-* Bronze/Silver/Gold separation
-* Audit-friendly raw data preservation
-* OPTIMIZE and ZORDER for performance
 
----
+## License
+This project is intended for learning and demonstration purposes.
+
 
 
